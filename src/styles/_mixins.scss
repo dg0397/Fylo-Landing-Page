@@ -60,3 +60,10 @@
         font-weight: $font-w;
     }
 }
+
+@mixin img(){
+    .container__img{
+        width: 100%;
+        @include image();
+    }
+}
