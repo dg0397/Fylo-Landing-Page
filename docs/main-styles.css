@@ -16,7 +16,7 @@
 body {
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   min-width: 320px;
   max-width: 500px;
@@ -87,6 +87,13 @@ header nav ul li a {
   margin-bottom: 2rem;
   padding: 0 .8rem;
   text-align: center;
+  color: #070439;
+}
+
+.features #first h2,
+.features #second h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
 }
 
 .features .curve {
@@ -97,6 +104,62 @@ header nav ul li a {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
+}
+
+.features #first .container__inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.features #first .container__inputs > * {
+  margin-bottom: .7rem;
+}
+
+.features #first .container__inputs:first-child input {
+  width: 100%;
+  height: 2.5rem;
+  margin-bottom: .5rem;
+  padding: .5rem 1.5rem;
+  font-size: .7rem;
+  font-weight: "Open Sans", sans-serif;
+  text-align: start;
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  color: #585989;
+  border: 1px solid #070439;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: none;
+}
+
+.features #first .container__inputs:last-child button {
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+  font-size: .9rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #f6f6fe;
+  background-color: #3065f8;
+  border-radius: 5px;
+  border: none;
+  box-shadow: none;
+  box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+}
+
+.features #first .container__inputs:last-child button:hover {
+  background: #4978f8;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.features #first .container__inputs:last-child button:active {
+  margin-top: .1rem;
+  background: #1d57f7;
 }
 
 .features #second {
