@@ -19,7 +19,12 @@ body {
   font-size: 14px;
   font-weight: 400;
   min-width: 320px;
-  max-width: 500px;
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    max-width: none;
+  }
 }
 
 .container__img {
@@ -74,6 +79,19 @@ header nav ul li a {
   color: #070439;
 }
 
+@media screen and (min-width: 720px) {
+  header {
+    height: 5rem;
+    padding: 2rem 1.8rem 0 1.8rem;
+  }
+  header nav {
+    width: 40%;
+  }
+  header nav ul li {
+    justify-content: flex-end;
+  }
+}
+
 .features {
   padding: 3rem 0 0 0;
 }
@@ -96,27 +114,57 @@ header nav ul li a {
   font-weight: 700;
 }
 
+.features #first > *,
+.features #second > * {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.features #first .container__img,
+.features #second .container__img {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
 .features .curve {
   width: 100%;
   min-height: 53px;
-  height: 5rem;
+  height: 7rem;
+  margin: 0 auto;
   background-image: url(static/images/bg-curve-mobile.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
 }
 
-.features #first .container__inputs {
+@media screen and (min-width: 720px) {
+  .features .curve {
+    background-image: url(static/images/bg-curve-desktop.svg);
+  }
+}
+
+.features #first form {
+  width: 100%;
+  max-width: 450;
+  margin: 0 auto;
+}
+
+.features #first form .container__inputs {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.features #first .container__inputs > * {
+.features #first form .container__inputs > * {
   margin-bottom: .7rem;
 }
 
-.features #first .container__inputs:first-child input {
+.features #first form .container__inputs:first-child {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.features #first form .container__inputs:first-child input {
   width: 100%;
   height: 2.5rem;
   margin-bottom: .5rem;
@@ -135,7 +183,12 @@ header nav ul li a {
   box-shadow: none;
 }
 
-.features #first .container__inputs:last-child button {
+.features #first form .container__inputs:last-child {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.features #first form .container__inputs:last-child button {
   width: 100%;
   height: 2.7rem;
   text-align: center;
@@ -152,14 +205,36 @@ header nav ul li a {
   cursor: pointer;
 }
 
-.features #first .container__inputs:last-child button:hover {
+.features #first form .container__inputs:last-child button:hover {
   background: #4978f8;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
-.features #first .container__inputs:last-child button:active {
+.features #first form .container__inputs:last-child button:active {
   margin-top: .1rem;
   background: #1d57f7;
+}
+
+@media screen and (min-width: 720px) {
+  .features #first {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "h2 img" "p img" "form img";
+    padding: 2rem 1.8rem;
+    text-align: left;
+  }
+  .features #first .container__img {
+    grid-area: img;
+  }
+  .features #first h2 {
+    grid-area: h2;
+  }
+  .features #first p {
+    grid-area: p;
+  }
+  .features #first form {
+    grid-area: form;
+  }
 }
 
 .features #second {
@@ -172,13 +247,14 @@ header nav ul li a {
   font-size: 1.1rem;
 }
 
-.features #second p {
+.features #second .container__p p {
   text-align: justify;
   color: #585989;
+  margin-bottom: 1rem;
 }
 
-.features #second .p-link {
-  display: flex;
+.features #second .container__p .p-link {
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: auto;
@@ -189,7 +265,7 @@ header nav ul li a {
   cursor: pointer;
 }
 
-.features #second .p-link a {
+.features #second .container__p .p-link a {
   margin-right: .3rem;
   color: #3c9f8f;
   font-family: "Raleway", sans-serif;
@@ -252,35 +328,98 @@ header nav ul li a {
   font-weight: 700;
 }
 
+@media screen and (min-width: 520px) {
+  .features #second .commits {
+    padding: 1.3rem 1.8rem;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .features #second .commits {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .features #second {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "h2 img" "p img" "commit img";
+    padding: 2rem 1.8rem;
+    text-align: left;
+  }
+  .features #second .container__img {
+    grid-area: img;
+    align-self: center;
+  }
+  .features #second h2 {
+    grid-area: h2;
+  }
+  .features #second .container__p {
+    grid-area: p;
+  }
+  .features #second .commits {
+    grid-area: commit;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .features #first > *,
+  .features #second > * {
+    max-width: none;
+    margin: 0;
+  }
+}
+
 .call__to__sing__in {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
   padding: 2rem .8rem;
   background: #585989;
   text-align: center;
   color: #f7f7fd;
 }
 
+.call__to__sing__in > * {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
 .call__to__sing__in .info__sing > * {
   margin-bottom: 1rem;
 }
 
-.call__to__sing__in .info__sing .container__inputs {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
+.call__to__sing__in form {
+  width: 100%;
+  max-width: 450;
   margin: 0 auto;
 }
 
-.call__to__sing__in .info__sing .container__inputs > * {
+.call__to__sing__in form .container__inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.call__to__sing__in form .container__inputs > * {
   margin-bottom: .7rem;
 }
 
-.call__to__sing__in .info__sing .container__inputs:first-child input {
+.call__to__sing__in form .container__inputs:first-child {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.call__to__sing__in form .container__inputs:first-child input {
   width: 100%;
   height: 2.5rem;
   margin-bottom: .5rem;
   padding: .5rem 1.5rem;
   font-size: .7rem;
-  font-weight: 400;
+  font-weight: "Open Sans", sans-serif;
   text-align: start;
   -webkit-appearance: textfield;
   background-color: white;
@@ -293,7 +432,12 @@ header nav ul li a {
   box-shadow: none;
 }
 
-.call__to__sing__in .info__sing .container__inputs:last-child button {
+.call__to__sing__in form .container__inputs:last-child {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.call__to__sing__in form .container__inputs:last-child button {
   width: 100%;
   height: 2.7rem;
   text-align: center;
@@ -310,14 +454,34 @@ header nav ul li a {
   cursor: pointer;
 }
 
-.call__to__sing__in .info__sing .container__inputs:last-child button:hover {
+.call__to__sing__in form .container__inputs:last-child button:hover {
   background: #4978f8;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
-.call__to__sing__in .info__sing .container__inputs:last-child button:active {
+.call__to__sing__in form .container__inputs:last-child button:active {
   margin-top: .1rem;
   background: #1d57f7;
+}
+
+@media screen and (min-width: 720px) {
+  .call__to__sing__in {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.8rem;
+  }
+  .call__to__sing__in .info__sing {
+    width: 50%;
+    text-align: left;
+  }
+  .call__to__sing__in form {
+    margin-bottom: 0;
+    width: 40%;
+  }
+  .call__to__sing__in form .container__inputs {
+    width: 100%;
+  }
 }
 
 footer {
@@ -411,6 +575,15 @@ footer .main__footer .social__media__icons > * i {
   height: 16px;
 }
 
+@media screen and (min-width: 620px) {
+  footer .main__footer {
+    flex-direction: row;
+  }
+  footer .main__footer > * {
+    flex: 1 0 auto;
+  }
+}
+
 footer .attribution {
   font-size: 14px;
   text-align: center;
@@ -418,6 +591,12 @@ footer .attribution {
 
 footer .attribution a {
   color: #f7f7fd;
+}
+
+@media screen and (min-width: 720px) {
+  footer {
+    padding: 2rem 1.8rem;
+  }
 }
 
 /*body{
