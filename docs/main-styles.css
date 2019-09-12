@@ -75,7 +75,7 @@ header nav ul li a {
 }
 
 .features {
-  margin: 3rem 0;
+  padding: 3rem 0 0 0;
 }
 
 .features #first,
@@ -137,12 +137,12 @@ header nav ul li a {
 
 .features #first .container__inputs:last-child button {
   width: 100%;
-  height: 3rem;
+  height: 2.7rem;
   text-align: center;
   font-size: .9rem;
   font-weight: 700;
   text-transform: capitalize;
-  color: #f6f6fe;
+  color: #f7f7fd;
   background-color: #3065f8;
   border-radius: 5px;
   border: none;
@@ -163,7 +163,254 @@ header nav ul li a {
 }
 
 .features #second {
+  padding-bottom: 3rem;
   background-color: #F8F8FE;
+}
+
+.features #second h2 {
+  font-size: 1.1rem;
+}
+
+.features #second p {
+  text-align: justify;
+  color: #585989;
+}
+
+.features #second .p-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: .3rem;
+  border-bottom: 1px solid #3c9f8f;
+  cursor: pointer;
+}
+
+.features #second .p-link a {
+  margin-right: .3rem;
+  color: #3c9f8f;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+}
+
+.features #second .commits {
+  width: 80%;
+  margin: 1rem auto;
+  padding: .8rem;
+  text-align: justify;
+  box-shadow: 0px 0px 10px #c1c1c1;
+  border-radius: 10px;
+}
+
+.features #second .commits > * {
+  margin-bottom: 1rem;
+}
+
+.features #second .commits p {
+  color: #070439;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.features #second .commits .icon {
+  width: auto;
+}
+
+.features #second .commits .icon img {
+  height: auto;
+  width: auto;
+}
+
+.features #second .commits .ceo {
+  display: flex;
+  justify-content: center;
+}
+
+.features #second .commits .ceo .profile {
+  flex: 1 0 20%;
+}
+
+.features #second .commits .ceo .profile img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+}
+
+.features #second .commits .ceo .info {
+  flex: 1 0 80%;
+  padding-left: .5rem;
+}
+
+.features #second .commits .ceo .info p {
+  text-align: left;
+  font-weight: 400;
+}
+
+.features #second .commits .ceo .info h4 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.call__to__sing__in {
+  padding: 2rem .8rem;
+  background: #585989;
+  text-align: center;
+  color: #f7f7fd;
+}
+
+.call__to__sing__in .info__sing > * {
+  margin-bottom: 1rem;
+}
+
+.call__to__sing__in .info__sing .container__inputs {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.call__to__sing__in .info__sing .container__inputs > * {
+  margin-bottom: .7rem;
+}
+
+.call__to__sing__in .info__sing .container__inputs:first-child input {
+  width: 100%;
+  height: 2.5rem;
+  margin-bottom: .5rem;
+  padding: .5rem 1.5rem;
+  font-size: .7rem;
+  font-weight: 400;
+  text-align: start;
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  color: #585989;
+  border: 1px solid #070439;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: none;
+}
+
+.call__to__sing__in .info__sing .container__inputs:last-child button {
+  width: 100%;
+  height: 2.7rem;
+  text-align: center;
+  font-size: .9rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #f7f7fd;
+  background-color: #3065f8;
+  border-radius: 5px;
+  border: none;
+  box-shadow: none;
+  box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+}
+
+.call__to__sing__in .info__sing .container__inputs:last-child button:hover {
+  background: #4978f8;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.call__to__sing__in .info__sing .container__inputs:last-child button:active {
+  margin-top: .1rem;
+  background: #1d57f7;
+}
+
+footer {
+  padding: 2rem .8rem;
+  color: #f7f7fd;
+  background: #070439;
+}
+
+footer .container__logo {
+  width: 100%;
+  max-width: 150px;
+  min-width: 100px;
+}
+
+footer .container__logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+footer .main__footer {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+}
+
+footer .main__footer > * {
+  flex: 1 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+footer .main__footer .contact .contact__info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+footer .main__footer .contact .contact__info .icon {
+  width: 5%;
+  margin-right: 1rem;
+  min-width: 21px;
+}
+
+footer .main__footer .contact .contact__info .icon img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+footer .main__footer .contact .contact__info p {
+  width: 90%;
+}
+
+footer .main__footer ul {
+  list-style: none;
+}
+
+footer .main__footer ul li {
+  margin-bottom: 1rem;
+}
+
+footer .main__footer ul li:last-child {
+  margin-bottom: 0;
+}
+
+footer .main__footer ul a {
+  color: #f7f7fd;
+  text-decoration: none;
+}
+
+footer .main__footer .social__media__icons {
+  margin: 3rem auto;
+}
+
+footer .main__footer .social__media__icons > * {
+  margin-right: .5rem;
+  padding: .8rem;
+  color: #F8F8FE;
+  border: 1px solid #f7f7fd;
+  border-radius: 50%;
+  transition: all .25s ease;
+  box-shadow: 0px 9px 16px #0101012a;
+  font-size: 16px;
+  text-align: center;
+}
+
+footer .main__footer .social__media__icons > * i {
+  width: 16px;
+  height: 16px;
 }
 
 /*body{

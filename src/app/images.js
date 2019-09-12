@@ -10,4 +10,5 @@ export function importImages(){
     require("../static/images/illustration-1.svg");
     require("../static/images/illustration-2.svg");
     require("../static/images/logo.svg");
+    require("../static/images/logo-footer.svg");
 }
