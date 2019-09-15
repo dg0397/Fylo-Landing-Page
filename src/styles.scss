@@ -17,6 +17,9 @@ body{
 
 @include img();
 
+
+/*HEADER LOGO AND NAV BAR*/
+
 header{
     display: flex;
     justify-content: space-between;
@@ -67,6 +70,8 @@ header{
     }
 }
 
+/*FEATURES*/
+
 .features{
 
     padding: 3rem 0 0 0;
@@ -93,6 +98,7 @@ header{
             margin: 0 auto}
         }
     }
+    /*CURVE SECTION*/
     .curve{
         width: 100%;
         min-height: 53px;
@@ -109,6 +115,7 @@ header{
             height: 9rem;
         }
     }
+    /*FIRST GRID*/
     #first{
         form{
             width: 100%;
@@ -200,6 +207,8 @@ header{
             }
         }
     }
+
+    /*SECOND GRID*/
     #second{
         padding-bottom: 3rem; 
         background-color: $color;
@@ -335,7 +344,9 @@ header{
         }
     }
 }
-.call__to__sing__in{
+
+/*CALL TO SIGN IN*/
+.call__to__sign__in{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -348,7 +359,7 @@ header{
         max-width:450px;
         margin: 0 auto;
       }  
-    .info__sing{
+      .info__sign__in{
         & > *{
             margin-bottom: 1rem;
             }
@@ -387,7 +398,7 @@ header{
             justify-content: space-between;
             align-items: center;
             padding: 2rem 1.8rem;
-            .info__sing{
+            .info__sign__in{
                 width: 50%;
                 text-align: left
             }
@@ -406,7 +417,7 @@ header{
                 max-width:none;
                 margin: 0;
               } 
-            .info__sing{
+            .info__sign__in{
                 h3{
                     font-size: 1.8rem;
                 }
@@ -428,6 +439,8 @@ header{
             }
         }
 }
+
+/*FOOTER*/
 footer{
     padding: 2rem .8rem; 
     color:$light-grayish-blue;
